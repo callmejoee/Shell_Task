@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
+#include <sys/wait.h>
 
 
 char *_strdup(char *str);
@@ -22,7 +22,7 @@ int shell_help(char **argv);
 int shell_exit(char **argv);
 int execute_fun(char **argv);
 int num_func(void);
-
+int open_fun(char **argv);
 
 
 #endif

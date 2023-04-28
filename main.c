@@ -13,7 +13,7 @@ int main(void)
 	int status;
 	char *line;
 	char **argv;
-	char *command;
+/*	char *command; */
 
 	status = 1;
 	prompt = "$ ";
@@ -23,7 +23,7 @@ int main(void)
 		_print(prompt);
 		line = get_line();
 		argv = split_line(line);
-		command = argv[0];
+/*		command = argv[0]; */
 		status = execute_fun(argv);
 		free(line);
 		free(argv);

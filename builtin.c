@@ -117,7 +117,7 @@ int execute_fun(char **argv)
 	for (i = 0; i < num_func(); i++)
 	{
 		if (_strcmp(argv[0], builtin_names[i]) == 1)
-				return (builtin_fun[i](argv));
+				return (builtin_func[i](argv));
 	}
 
 	return(open_fun(argv));
