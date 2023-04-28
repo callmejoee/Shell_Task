@@ -20,7 +20,7 @@ int (*builtin_func[]) (char **) = {&change_dir, &shell_help, &shell_exit};
  *
  */
 
-int num_func()
+int num_func(void)
 {
 	return (sizeof(builtin_names) / sizeof(char *));
 }
@@ -65,7 +65,7 @@ int shell_help(char **argv)
 {
 	int i = 0;
 	char *func;
-	
+
 	(void)argv;
 
 	_print("Youssef's shell");
@@ -117,8 +117,8 @@ int execute_fun(char **argv)
 	for (i = 0; i < num_func(); i++)
 	{
 		if (_strcmp(argv[0], builtin_names[i]) == 1)
-				return (builtin_func[i](argv));
+			return (builtin_func[i](argv));
 	}
 
-	return(open_fun(argv));
+	return (open_fun(argv));
 }

@@ -29,10 +29,8 @@ int open_fun(char **argv)
 	{
 		do {
 			waitpid(pid, &status, WUNTRACED);
-		}
-		while (!WIFEXITED(status) && !WIFSIGNALED(status));
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 
 	return (1);
 }
-	

@@ -9,6 +9,7 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
+extern char **environ;
 
 char *_strdup(char *str);
 int _strcmp(char *str1, char *str2);
@@ -23,6 +24,10 @@ int shell_exit(char **argv);
 int execute_fun(char **argv);
 int num_func(void);
 int open_fun(char **argv);
+int _execvp(char *arg, char **argv);
+void replace_pound_with_null(char* str);
+char *handle_line(char *line);
+void remove_double_quotes(char* str);
 
 
 #endif

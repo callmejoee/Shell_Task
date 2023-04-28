@@ -17,13 +17,14 @@ char **split_line(char *line)
 {
 	int buffer_size = BUFF_SIZE, i = 0;
 	char *token;
+	char **tokens;
 
-	char **tokens = malloc(buffer_size * sizeof(char *));
+	tokens = malloc(buffer_size * sizeof(char *));
 
 	if (!tokens)
 	{
-		    perror("allocation error\n");
-		    exit(EXIT_FAILURE);
+		perror("allocation error\n");
+		exit(EXIT_FAILURE);
 	}
 	token = strtok(line, DELIM);
 	while (token != NULL)
